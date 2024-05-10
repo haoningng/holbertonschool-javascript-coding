@@ -7,6 +7,10 @@ request.get(`https://swapi-api.hbtn.io/api/films/${process.argv[2]}`, (error, re
   } else if (response.statusCode !== 200) {
     console.error('code:', response.statusCode);
   } else {
-    console.log(body.title);
+    try {
+      console.log(JSON.parse(body).title);
+    } catch (err) {
+      console.log(err);
+    }
   }
 });
