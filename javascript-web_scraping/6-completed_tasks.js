@@ -12,8 +12,7 @@ request.get(process.argv[2], (error, response, body) => {
       const data = JSON.parse(body);
       for (const each of data) {
         if (each.completed) {
-          result[each.userId] = result[each.userId] ? 
-          result[each.userId] + 1 : 1
+          result[each.userId] = result[each.userId] ? result[each.userId] + 1 : 1;
         }
       }
       console.log(result);
