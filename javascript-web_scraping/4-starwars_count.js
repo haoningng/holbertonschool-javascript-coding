@@ -13,7 +13,7 @@ request.get(process.argv[2], (error, response, body) => {
       for (const each of array) {
         for (const charUrl of each.characters) {
           const splitted = charUrl.split('/');
-          const last = splitted[splitted.length - 2]
+          const last = splitted[splitted.length - 2];
           if (last === '18') {
             newList.push(each);
             break;
