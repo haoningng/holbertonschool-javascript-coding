@@ -11,8 +11,13 @@ request.get(process.argv[2], (error, response, body) => {
       const array = JSON.parse(body).results;
       const newList = [];
       for (const each of array) {
-        if (each.characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
-          newList.push(each);
+        for (const charUrl of each.characters) {
+          const splitted = charUrl.split('/');
+          const last = splitted[splitted.length - 2]
+          if (last === '18') {
+            newList.push(each);
+            break;
+          }
         }
       }
       console.log(newList.length);
