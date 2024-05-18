@@ -3,6 +3,7 @@ These are my projects in Javascript, completed as part of my Full Stack Software
 
 ## Projects:
 * [JavaScript - Web scraping](javascript-web_scraping/)
+* [NodeJS Basics](Node_JS_basic/)
 
 ## Requirements:
 * Ubuntu 14.04 LTS
