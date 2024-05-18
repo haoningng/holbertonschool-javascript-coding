@@ -26,11 +26,10 @@ async function countStudents(path) {
         const newValue = dict[key].map((name) => (dict[key].indexOf(name) === 0 ? name : ` ${name}`));
         process.stdout.write(`Number of students in ${key}: ${dict[key].length}. List: ${newValue}\n`);
       }
-    };
+    }
   } catch (err) {
     throw new Error('Cannot load the database');
   }
-  
 }
 
 module.exports = countStudents;
